@@ -1,0 +1,11 @@
+@import './helpers/variables';
+@import './helpers/mixin';
+//base
+@import './base/reset';
+
+//layout
+@import './layouts/header';
+@import './layouts/carousel';  
+@import './layouts/teacher';
+@import './layouts/findCourse';
+@import './layouts/footer';

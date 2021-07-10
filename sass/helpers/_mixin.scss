@@ -1,0 +1,44 @@
+@mixin styleText($fs, $fw, $color) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $color;
+}
+
+@mixin styleButton($py, $px,) {
+  box-shadow: 0 0 0 3em #b61984 inset;
+  padding: $py $px;
+  text-decoration: none;
+  font-weight: 300;
+  text-align: center;
+  background: transparent;
+  border-radius: 50px;
+  color: $color-white-3;
+}
+@mixin styleButtonHover() {
+  box-shadow: 0 0 0 1px #b61984 inset;
+  color: #b61984;
+}
+@mixin styleContactIcon() {
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  left: 12px;
+  color: $color-purple-1;
+  font-size: 13px;
+  font-weight: 300;
+}
+@mixin liFooterStyle(){
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  line-height: 1;
+  padding: .8em 0;
+}
+@mixin responsive($screen) {
+  @if (map-has-key($map: $breakpoints, $key: $screen)) {
+    $value: map-get(
+      $map: $breakpoints,
+      $key: $screen,
+    );
+  } @else {
+    @error 'Screen does not exists!';
+  }
+}

@@ -1,0 +1,88 @@
+header {
+  position: relative;
+  background-color: transparent;
+  @include styleText($fs-1, $fw-2, $color-dark-1);
+
+  .backgroundImg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -999;
+  }
+  .navbar {
+    padding: 0;
+    float: left;
+    width: 72%;
+  }
+  
+  .navbar-expand-lg .navbar-nav .nav-link {
+      
+    @include styleText($fs-1, $fw-2, $color-dark-1);
+    padding: 0 40px 0 0;
+    position: relative;
+    transition: all 0.3s;
+    &::after {
+      content: " ";
+      display: block;
+      position: absolute;
+      z-index: 5;
+      bottom: -18px;
+      left: 18%;
+      pointer-events: none;
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      transform: scale(0);
+    }
+    
+    &:hover {
+      color: #b61984;
+      &::after {
+        transform: scale(1.1);
+        background-color: #b61984;
+      }
+    }
+  }
+  .navbar-brand img {
+    width: 80px;
+  }
+  .ul {
+    .li {
+      padding: 0 50px 0 0;
+    }
+  }
+  .groupButton {
+    padding-top: 18px;
+    display: flex;
+    align-items: center;
+    a {
+      @include styleText($fs-1, $fw-1, $color-white-3);
+      box-shadow: 0 0 0 3em #b61984 inset;
+
+      padding: 0.8em 1.5em;
+      margin: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      text-align: center;
+      background: transparent;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      &:hover {
+        @include styleButtonHover();
+      }
+    }
+    .socialGroupButton {
+      i {
+        margin-left: 0.5em;
+        transition: all 0.3s;
+        @include styleText($fs-1, $fw-3, $color-dark-1);
+        &:hover {
+          color: #b61984;
+        }
+      }
+    }
+  }
+}
+//responsive

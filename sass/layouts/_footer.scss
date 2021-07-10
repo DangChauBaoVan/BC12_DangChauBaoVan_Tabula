@@ -1,0 +1,117 @@
+footer {
+  background-image: url(../../img/footer_background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  padding: 10em 0;
+  .footer__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    .footer__gridItem {
+      padding: 0 15px;
+      h2 {
+        color: $color-white-3;
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        color: $color-white-3;
+        &:first-child {
+          margin-top: 1.5em;
+        }
+        i {
+          margin-right: 5px;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: $color-white-3;
+      }
+      .contactUs {
+        font-size: $fs-1;
+        font-weight: $fw-2;
+
+        .socialGroupButton {
+          margin-top: 2em;
+
+          i{
+              margin: 0 1em 0 0;
+              transition: all 0.5s;
+              &:hover{
+                color: $color-dark-1;
+              }
+          }
+        }
+      }
+      .quickLinks {
+        li {
+          @include liFooterStyle();
+        }
+        a {
+          transition: all 0.5s;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+      .about {
+        li {
+          @include liFooterStyle();
+        }
+        a {
+          transition: all 0.5s;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+      .newsletter {
+        .inputEmail {
+          .form-control {
+            &:focus {
+              border: 1px solid rgba(255, 255, 255, 1);
+              box-shadow: none;
+            }
+          }
+          input {
+            color: $color-white-3;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            width: 100%;
+            background: transparent;
+            line-height: 1;
+            display: block;
+            padding: 1em;
+            height: 3em;
+            text-align: center;
+            &::placeholder {
+              color: $color-white-3;
+              text-align: center;
+            }
+          }
+        }
+        .subButton {
+          .btn {
+            margin-top: 1em;
+            border-radius: 50px;
+            width: 100%;
+            line-height: 1;
+            display: block;
+            padding: 1em;
+            height: 3em;
+            box-shadow: 0 0 0 3em #fff inset;
+            color: #181818;
+            transition: all 0.3s;
+            &:hover {
+              box-shadow: 0 0 0 1px #fff inset;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+.findCourse {
+  padding-top: 4rem;
+  position: relative;
+  .findCourse__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  .findCourse__contentLeft {
+    img {
+      margin: 0;
+      line-height: 0;
+      max-width: 100%;
+      height: auto;
+    }
+    z-index: 5;
+  }
+  .findCourse__contentRight {
+    form {
+      background-color: rgba(255, 255, 255, 1);
+      box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+      width: 75%;
+      padding: 0 25px;
+      border-radius: 10px;
+      overflow: hidden;
+
+      .formContent {
+        padding: 0 5px;
+        h2 {
+          font-size: $fs-3;
+          font-weight: 700;
+          margin-bottom: 4.2rem;
+        }
+      }
+      .form-control {
+        transition: all 0.5s;
+        &:focus {
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+          border: 1px solid rgba(0, 0, 0, 0.3);
+        }
+      }
+      input,
+      select {
+        border-radius: 50px;
+        
+      }
+      textarea {
+        border-radius: 10px;
+      }
+      select-items {
+        &:hover {
+          background-color: none;
+          color: $color-purple-1;
+        }
+      }
+    }
+    .contactName {
+      input {
+        position: relative;
+        padding-left: 25px;
+        font-size: $fs-1;
+      }
+      i {
+        @include styleContactIcon();
+      }
+    }
+    .contactEmail {
+      input {
+        position: relative;
+        padding-left: 25px;
+        font-size: $fs-1;
+      }
+      i {
+        @include styleContactIcon();
+      }
+    }
+    .contactLang {
+      position: relative;
+      select {
+        font-size: $fs-1;
+        padding-left: 25px;
+        font-weight: 400;
+        color: #495057;
+      }
+      i {
+        position: absolute;
+        top: 10px;
+        left: 5px;
+        z-index: 2;
+        color: $color-purple-1;
+        font-size: 13px;
+      }
+    }
+    .contactMessage {
+      position: relative;
+      textarea {
+        position: relative;
+        padding-left: 25px;
+        font-size: 13px;
+      }
+      i {
+        position: absolute;
+        top: 10px;
+        left: 5px;
+        z-index: 2;
+        color: $color-purple-1;
+        font-size: 13px;
+        font-weight: 300;
+      }
+    }
+    .buttonSend {
+      padding: 0 0 4rem 0;
+      button {
+        @include styleButton(1em, 4em);
+        font-weight: 500;
+        margin-top: 3rem;
+        transition: all 0.3s ease;
+        &:hover {
+          @include styleButtonHover();
+        }
+      }
+    }
+    z-index: 5;
+  }
+  .findCourse__cover{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom:0;
+    pointer-events: none;
+    img{
+      width: 100%;
+      height: auto;
+      display: block;
+      max-width: 100%;
+    }
+  }
+}

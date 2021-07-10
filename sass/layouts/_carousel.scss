@@ -1,0 +1,36 @@
+.carousel {
+  .carousel__content {
+    display: flex;
+    align-items: center;
+    .carousel__left {
+      span {
+        @include styleText($fs-2, $fw-3, $color-purple-1);
+        letter-spacing: 1px;
+      }
+      h2 {
+        @include styleText(3rem, $fw-5, $color-dark-1);
+      }
+    }
+    .carousel__right {
+      img {
+        margin: 0;
+        line-height: 0;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .bottomSectionCoverImage {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -25%;
+    pointer-events: none;
+    margin-bottom: 40px;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
